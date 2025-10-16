@@ -1,4 +1,4 @@
-# Wildlife-Image-Classification-Project-
+# Wildlife-Image-Classification-Project
 
 Dự án này là một chuỗi các notebook Jupyter được thiết kế để hướng dẫn bạn xây dựng một hệ thống phân loại hình ảnh động vật hoang dã từ cơ bản đến nâng cao, sử dụng các nguyên tắc của học sâu (deep learning) và thư viện PyTorch.
 
