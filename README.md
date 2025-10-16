@@ -15,12 +15,7 @@ Notebook này đi sâu vào việc xây dựng một mô hình phân loại nh�
 ### 4. 014-multiclass-classification.ipynb 
 Tiếp nối từ bài học trước, notebook này mở rộng kiến thức về mô hình phân loại đa lớp (multiclass classification). Bạn sẽ học cách điều chỉnh mô hình để xử lý nhiều hơn hai lớp động vật (ví dụ: gấu, sói, hươu), cách tổ chức dữ liệu và sử dụng các hàm kích hoạt (activation function) cũng như hàm mất mát phù hợp cho bài toán này.
 
-Hướng dẫn sử dụng
-Để chạy các notebook này, bạn cần cài đặt các thư viện cần thiết, bao gồm PyTorch và Pillow.
+Để chạy các notebook này, bạn cần cài đặt các thư viện cần thiết, bao gồm **PyTorch** và **Pillow**.
 
-Bash
-
+```bash
 pip install torch torchvision pillow
-Sau khi cài đặt, bạn có thể mở các tệp .ipynb bằng Jupyter Notebook hoặc JupyterLab để khám phá nội dung từng bài học.
-
-Chúc bạn thành công với dự án phân loại hình ảnh động vật hoang dã!
