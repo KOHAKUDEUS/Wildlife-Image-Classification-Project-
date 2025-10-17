@@ -6,6 +6,15 @@ Dự án này là một chuỗi các notebook Jupyter được thiết kế đ�
 ### 1. 011-image-as-data.ipynb
 Notebook này giới thiệu các bước chuẩn bị dữ liệu hình ảnh cho mô hình học sâu. Bạn sẽ tìm hiểu cách tải, xử lý và biến đổi hình ảnh từ các định dạng khác nhau thành các tensor PyTorch. Notebook cũng đề cập đến cách giải quyết các vấn đề thường gặp như kích thước và chế độ màu sắc (RGB, grayscale) không đồng nhất trong tập dữ liệu.
 
+Bước 1: Khám phá data (Data explore)
+Task 1.1.11  xác định được data_dir và train_data_dir
+Task 1.1.12 Tạo ra danh sách các nội dung trong train_dỉ và assign result cho class_dir
+Task 1.1.13 Khám phá distribution trong các class
+Task 1.1.14 Tạo ra bar chart để visualize distribution
+Task 1.1.15 load một vài ảnh trong tập dữ liệu 
+Task 1.1.16 Kiểm tra size và mode trong bức ảnh cùng một class hoặc và trong các class khác nhau 
+Task 1.1.17 Chuyển ảnh sang tensor và xử lý trên bản sao 
+
 ### 2. 012-fix-my-code.ipynb
 Trong notebook này, chúng ta sẽ tập trung vào kỹ năng gỡ lỗi cần thiết khi làm việc với PyTorch. Bạn sẽ được thực hành tìm và sửa các lỗi trong đoạn mã, từ đó hiểu rõ hơn về cách đọc thông báo lỗi và đưa ra giải pháp hiệu quả.
 
