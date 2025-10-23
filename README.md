@@ -2,29 +2,26 @@
 
 Dự án này là một chuỗi các notebook Jupyter được thiết kế để hướng dẫn bạn xây dựng một hệ thống phân loại hình ảnh động vật hoang dã từ cơ bản đến nâng cao, sử dụng các nguyên tắc của học sâu (deep learning) và thư viện PyTorch.
 
-## Nội dung chính
-### 1. 011-image-as-data.ipynb
-Notebook này giới thiệu các bước chuẩn bị dữ liệu hình ảnh cho mô hình học sâu. Bạn sẽ tìm hiểu cách tải, xử lý và biến đổi hình ảnh từ các định dạng khác nhau thành các tensor PyTorch. Notebook cũng đề cập đến cách giải quyết các vấn đề thường gặp như kích thước và chế độ màu sắc (RGB, grayscale) không đồng nhất trong tập dữ liệu.
+Kho lưu trữ này chứa các notebook Jupyter từ khóa học **AI Lab: Deep Learning for Computer Vision** của [WorldQuant University](https://www.wqu.edu/). Dự án tập trung vào việc khám phá hình ảnh như dữ liệu, xây dựng và huấn luyện mô hình phân loại nhị phân và đa lớp sử dụng PyTorch. Các notebook minh họa cách xử lý dữ liệu hình ảnh, xây dựng mạng nơ-ron tích chập (CNN) và đánh giá mô hình.
 
-Bước 1: Khám phá data (Data explore)
-Task 1.1.11  xác định được data_dir và train_data_dir
-Task 1.1.12 Tạo ra danh sách các nội dung trong train_dỉ và assign result cho class_dir
-Task 1.1.13 Khám phá distribution trong các class
-Task 1.1.14 Tạo ra bar chart để visualize distribution
-Task 1.1.15 load một vài ảnh trong tập dữ liệu 
-Task 1.1.16 Kiểm tra size và mode trong bức ảnh cùng một class hoặc và trong các class khác nhau 
-Task 1.1.17 Chuyển ảnh sang tensor và xử lý trên bản sao 
+## Mục Tiêu
 
-### 2. 012-fix-my-code.ipynb
-Trong notebook này, chúng ta sẽ tập trung vào kỹ năng gỡ lỗi cần thiết khi làm việc với PyTorch. Bạn sẽ được thực hành tìm và sửa các lỗi trong đoạn mã, từ đó hiểu rõ hơn về cách đọc thông báo lỗi và đưa ra giải pháp hiệu quả.
+- Hiểu cách biểu diễn hình ảnh dưới dạng dữ liệu số (tensor) và khám phá đặc trưng của chúng.
+- Xây dựng và huấn luyện mô hình phân loại nhị phân (binary classification) cho hình ảnh.
+- Xây dựng và huấn luyện mô hình phân loại đa lớp (multiclass classification) cho hình ảnh.
+- Sử dụng các công cụ như PyTorch để xử lý dữ liệu, huấn luyện và đánh giá mô hình.
 
-### 3. 013-binary-classification.ipynb
-Notebook này đi sâu vào việc xây dựng một mô hình phân loại nhị phân (binary classification). Bạn sẽ học cách chuẩn bị dữ liệu cho bài toán hai lớp (ví dụ: "có động vật hoang dã" và "không có"), xây dựng một mạng nơ-ron đơn giản, và huấn luyện mô hình để phân biệt giữa hai loại. Các khái niệm như hàm mất mát (loss function) và độ chính xác (accuracy) cũng được giới thiệu.
+## Bộ Dữ Liệu
 
-### 4. 014-multiclass-classification.ipynb 
-Tiếp nối từ bài học trước, notebook này mở rộng kiến thức về mô hình phân loại đa lớp (multiclass classification). Bạn sẽ học cách điều chỉnh mô hình để xử lý nhiều hơn hai lớp động vật (ví dụ: gấu, sói, hươu), cách tổ chức dữ liệu và sử dụng các hàm kích hoạt (activation function) cũng như hàm mất mát phù hợp cho bài toán này.
+- **Nguồn**: Bộ dữ liệu bao gồm hình ảnh động vật (ví dụ: antelope, grizzly), được tổ chức theo thư mục cho phân loại nhị phân (hai lớp) và đa lớp (nhiều lớp).
+- **Vị trí**: Dữ liệu lưu trong các thư mục như `data_p1/train`, được chia theo lớp (ví dụ: antelope, grizzly).
+- **Tiền xử lý**: Hình ảnh được tải bằng PIL, chuyển đổi thành tensor, thay đổi kích thước và chuẩn hóa. Xử lý các chế độ hình ảnh khác nhau (grayscale, RGB) và tính toán giá trị trung bình kênh màu.
+- **Đặc trưng**: Hình ảnh có kích thước khác nhau, giá trị pixel từ 0-1 sau khi chuyển thành tensor.
 
-Để chạy các notebook này, bạn cần cài đặt các thư viện cần thiết, bao gồm **PyTorch** và **Pillow**.
+## Cấu Trúc Kho Lưu Trữ
 
-```bash
-pip install torch torchvision pillow
+| Notebook | Mô Tả |
+|----------|-------|
+| `011-image-as-data.ipynb` | Khám phá hình ảnh như dữ liệu: Tải, hiển thị, chuyển đổi thành tensor, phân tích kích thước, chế độ và giá trị trung bình kênh màu. |
+| `013-binary-classification.ipynb` | Xây dựng và huấn luyện mô hình phân loại nhị phân sử dụng CNN với PyTorch, đánh giá bằng độ chính xác và ma trận nhầm lẫn. |
+| `014-multiclass-classification.ipynb` | Xây dựng và huấn luyện mô hình phân loại đa lớp, sử dụng các thư viện như Torchvision cho dữ liệu và mô hình. |
